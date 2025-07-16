@@ -1,0 +1,643 @@
+{
+  "info": {
+    "_postman_id": "56de5560-c96e-4cd7-9110-2f6f5adca958",
+    "name": "Blog",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45483925",
+    "_collection_link": "https://ompatel-9494113.postman.co/workspace/Om-Patel's-Workspace~2a3c8e45-5cf3-406d-89f7-5aacbc3bda8f/collection/45483925-56de5560-c96e-4cd7-9110-2f6f5adca958?action=share&source=collection_link&creator=45483925"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "a",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "a@a.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "a",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/register",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "a@a.com",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "b@b.com",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "password",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/login",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/profile",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "profile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Profile Picture",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "profilePicture",
+              "type": "file",
+              "src": "/C:/Users/ompat/Downloads/profile.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/profilePicture",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "profilePicture"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "All Users",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/6875e4cc72789c83381601ef",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "6875e4cc72789c83381601ef"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tag",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "tagName",
+              "value": "tag1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tags/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tags", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Single Tag",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "tagName",
+              "value": "tag1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tags/687647b6b079f88a2449a1b5",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tags", "687647b6b079f88a2449a1b5"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "All Filtered Tags",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tags/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tags", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tag",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "tagName",
+              "value": "test tag",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tags/687647b6b079f88a2449a1b5",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tags", "687647b6b079f88a2449a1b5"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tag",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tags/687647b6b079f88a2449a1b5",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tags", "687647b6b079f88a2449a1b5"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Single Post",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/posts/68779fcfde09eb4aacb5e585",
+          "host": ["{{base_url}}"],
+          "path": ["api", "posts", "68779fcfde09eb4aacb5e585"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "All Filtered Posts",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/posts/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "posts", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "test title",
+              "type": "text"
+            },
+            {
+              "key": "body",
+              "value": "test body 123",
+              "type": "text"
+            },
+            {
+              "key": "tags",
+              "value": "[\"68764c97e4fb383f4380c07c\"]",
+              "type": "text"
+            },
+            {
+              "key": "postPicture",
+              "type": "file",
+              "src": "/C:/Users/ompat/Downloads/1.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/posts/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "posts", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "title",
+              "value": "Hello 2",
+              "type": "text"
+            },
+            {
+              "key": "body",
+              "value": "Hello World 2",
+              "type": "text"
+            },
+            {
+              "key": "tags",
+              "value": "[\"68764c97e4fb383f4380c07c\", \"68764c9de4fb383f4380c080\"]",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/posts/6877980aa41ea198f96c6ba6",
+          "host": ["{{base_url}}"],
+          "path": ["api", "posts", "6877980aa41ea198f96c6ba6"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Picture",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "postPicture",
+              "description": "Uncheck this to remove picture",
+              "type": "file",
+              "src": "/C:/Users/ompat/Downloads/4.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/posts/6877980aa41ea198f96c6ba6/postPicture",
+          "host": ["{{base_url}}"],
+          "path": ["api", "posts", "6877980aa41ea198f96c6ba6", "postPicture"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}/api/posts/6877980aa41ea198f96c6ba6",
+          "host": ["{{base_url}}"],
+          "path": ["api", "posts", "6877980aa41ea198f96c6ba6"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "All Filtered Comments",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "postId",
+              "value": "68779fcfde09eb4aacb5e585",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is comment",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/comments/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "comments", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "postId",
+              "value": "68779fcfde09eb4aacb5e585",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is comment",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/comments/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "comments", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Comment",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMGJjMDQ4Mjk4NzlhZWEwYzE0MyIsImlhdCI6MTc1MjU1MTYyOSwiZXhwIjoxNzU1MTQzNjI5fQ.MsWYLj3-lsRk0ttTLVV-9GhtkQhJXiTHxJuuez287c0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "description",
+              "value": "test comment",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/comments/6877a432943fa16c364bc964",
+          "host": ["{{base_url}}"],
+          "path": ["api", "comments", "6877a432943fa16c364bc964"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Comment",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzVkMDY1MDQ4Mjk4NzlhZWEwYzEzZiIsImlhdCI6MTc1MjU1NjM2MCwiZXhwIjoxNzU1MTQ4MzYwfQ.5fK6z0g5t3dyKA1N-i98UJjJ8aVMdrGNKbDKlKpdZso",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "postId",
+              "value": "68779fcfde09eb4aacb5e585",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "this is comment",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/comments/6877a432943fa16c364bc964",
+          "host": ["{{base_url}}"],
+          "path": ["api", "comments", "6877a432943fa16c364bc964"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
